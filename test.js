@@ -16,10 +16,12 @@ const cases = [
 
 const tests = cases
   .forEach(({ des, inp, out }) => {
+    const before = new Date()
     const a = f(inp)
+    console.log(`Ran function in ${new Date() - before}ms: ${des}`)
     console.assert(
       out.includes(a),
-      red(`${des}: ${out} does not include ${a}`)
+      red(`${des}: answer ${a} not found in [${out}]`)
     )
   })
 

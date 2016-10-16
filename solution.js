@@ -1,5 +1,5 @@
-function solution(){
-  return -1
+function solution(A){
+  return 1
 }
 
 module.exports = solution

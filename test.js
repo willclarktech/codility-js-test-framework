@@ -12,6 +12,16 @@ const cases = [
     inp: [],
     out: [-1],
   },
+  {
+    des: 'large array same values',
+    inp: Array(1e6).fill(0),
+    out: [0],
+  },
+  {
+    des: 'large array different values',
+    inp: [...Array(1e6)].map((n,i) => i),
+    out: [1e6 - 1],
+  },
 ]
 
 const tests = cases
